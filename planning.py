@@ -68,6 +68,7 @@ def main():
 
         # print('week {}'.format(i))
         # print('{}'.format(start_datatime + delta_week*i))
+        print('\n')
         print('Week {}: Sun {} - Sat {}'.format(week_nr, sunday_start, saterday_end))
 
         # weekly chores
