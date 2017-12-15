@@ -3,7 +3,7 @@ import datetime
 
 def players():
 
-    lst = ['laurens', 'ruth', 'elien', 'camiel' ]
+    lst = ['Laurens', 'Ruth', 'Elien', 'Camiel' ]
     return lst
 
 def dagelijks():
@@ -13,17 +13,23 @@ def dagelijks():
 
 
 def wekelijks():
-    lst = ['planten water geven']
-    lst.append('badkamer en middelste deel trap stofzuigen')
-    lst.append("badkamer glas + lavabo's proper maken")
-    lst.append("beneden + onderkant trap stofzuigen")
-    lst.append("wc")
-
-    return lst # enumerate(lst)
+    lst = {'plant': 'planten water geven',
+           'midden': 'badkamer en middelste deel trap stofzuigen',
+           "lavabo": "badkamer glas + lavabo's proper maken",
+           "beneden": 'beneden + onderkant trap stofzuigen',
+           "wc" : "toilet"
+           }
+    
+    return lst
 
 def maandelijks():
-    lst = ['gasvuur deftig', 'afstoffen hoog en kasten afkuisen', 'oven + micro', 'dwijlen beneden']
-    return enumerate(lst)
+    lst = {'gasvuur' : 'gasvuur deftig',
+           'afstoffen' : 'afstoffen hoog en kasten afkuisen beneden',
+           'oven' : 'oven + micro',
+           'dwijlen' : 'dwijlen beneden'
+           }
+    
+    return lst
 
 def dow(date):
     # date of the week
@@ -36,10 +42,19 @@ def iso_week(date):
     week_nr = start_iso[1]
     return week_nr
 
+def day_of_month(date):
+    return date.day
+
+
+def month(date):
+    return date.month
+
+
 def main():
     """ load """
     plyrs = players()
     job_week = wekelijks()
+    job_month = maandelijks()
 
     """ should give the 'working' schedule """
 
@@ -56,6 +71,9 @@ def main():
     delta_day = datetime.timedelta(days=1)
 
     print(start_datatime)
+    
+    date_list = []
+    date_list_times = []
 
     for i in range(52): # the next 52 weeks
         sunday_start = first_sunday + delta_week*i
@@ -71,16 +89,65 @@ def main():
         print('\n')
         print('Week {}: Sun {} - Sat {}'.format(week_nr, sunday_start, saterday_end))
 
+        date_list_times.append('{} - {}'.format(sunday_start, saterday_end))
+
+        person_jobs = [[] for _ in range(4)]
+        
         # weekly chores
-        if 0:
+        if 1:
             for i_job, job_i in enumerate(job_week):
-                person_i = plyrs[(week_nr + i_job)%4]
-                print('{} : {}'.format(person_i, job_i))
+                i_person = (week_nr + i_job)%4
+                person_i = plyrs[i_person]
+                # print('{} : {}'.format(person_i, job_i))
+                (person_jobs[i_person]).append(job_i)
+        
+        # Monthly chores
+        if day_of_month(saterday_end) <= 7:
+            for i_job, job_i in enumerate(job_month):
+                i_person = (month(saterday_end) + i_job) % 4
+                (person_jobs[i_person]).append(job_i)
+                
+        for i_person, person_i in enumerate(plyrs):
+            print('{} : {}'.format(person_i, person_jobs[i_person]))
+
+        date_list.append(person_jobs)
+            
 
         # print('{}'.format())
 
         # TODO weekly chores
         # TODO check if first week of the month: ifso do some extra stuff
+
+    import csv
+    
+    with open('testfile.csv', 'w') as f:
+        f.write('KUISPLAN\n\n')
+        
+        for a in job_week:
+            f.write('{} = {}\n'.format(a, job_week[a]))
+            
+        for a in job_month:
+            f.write('{} = {}\n'.format(a, job_month[a]))
+
+        f.write('\n')
+        
+        spamwriter = csv.writer(f, delimiter=';',
+                                quotechar='#', quoting=csv.QUOTE_MINIMAL)
+
+        # str_list = ', '.join(plyrs)
+        
+        
+        spamwriter.writerow([None] + plyrs)
+        
+        for i_dat in range(len(date_list)):
+            
+            str_list = [date_list_times[i_dat]] + [', '.join(a) for a in date_list[i_dat]]
+
+            spamwriter.writerow(str_list)
+            
+            # str =  ' | '.join(str_list)
+            # f.write(str)
+    # print(date_list)
 
 
 if __name__ == '__main__':
