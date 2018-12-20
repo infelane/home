@@ -1,0 +1,65 @@
+KUISPLAN
+
+plant = planten water geven
+beneden = beneden + onderkant trap stofzuigen
+wc = toilet
+midden = badkamer en middelste deel trap stofzuigen
+lavabo = badkamer glas + lavabo's proper maken
+gasvuur = gasvuur deftig
+afstoffen = afstoffen hoog en kasten afkuisen beneden
+oven = oven + micro
+dwijlen = dwijlen beneden
+
+;Laurens;Ruth;Elien;Camiel
+2017-11-19 - 2017-11-25;wc;midden;plant, lavabo;beneden
+2017-11-26 - 2017-12-02;beneden, gasvuur;wc, afstoffen;midden, oven;plant, lavabo, dwijlen
+2017-12-03 - 2017-12-09;plant, lavabo;beneden;wc;midden
+2017-12-10 - 2017-12-16;midden;plant, lavabo;beneden;wc
+2017-12-17 - 2017-12-23;wc;midden;plant, lavabo;beneden
+2017-12-24 - 2017-12-30;beneden;wc;midden;plant, lavabo
+2017-12-31 - 2018-01-06;plant, lavabo, dwijlen;beneden, gasvuur;wc, afstoffen;midden, oven
+2018-01-07 - 2018-01-13;midden;plant, lavabo;beneden;wc
+2018-01-14 - 2018-01-20;wc;midden;plant, lavabo;beneden
+2018-01-21 - 2018-01-27;beneden;wc;midden;plant, lavabo
+2018-01-28 - 2018-02-03;plant, lavabo, oven;beneden, dwijlen;wc, gasvuur;midden, afstoffen
+2018-02-04 - 2018-02-10;midden;plant, lavabo;beneden;wc
+2018-02-11 - 2018-02-17;wc;midden;plant, lavabo;beneden
+2018-02-18 - 2018-02-24;beneden;wc;midden;plant, lavabo
+2018-02-25 - 2018-03-03;plant, lavabo, afstoffen;beneden, oven;wc, dwijlen;midden, gasvuur
+2018-03-04 - 2018-03-10;midden;plant, lavabo;beneden;wc
+2018-03-11 - 2018-03-17;wc;midden;plant, lavabo;beneden
+2018-03-18 - 2018-03-24;beneden;wc;midden;plant, lavabo
+2018-03-25 - 2018-03-31;plant, lavabo;beneden;wc;midden
+2018-04-01 - 2018-04-07;midden, gasvuur;plant, lavabo, afstoffen;beneden, oven;wc, dwijlen
+2018-04-08 - 2018-04-14;wc;midden;plant, lavabo;beneden
+2018-04-15 - 2018-04-21;beneden;wc;midden;plant, lavabo
+2018-04-22 - 2018-04-28;plant, lavabo;beneden;wc;midden
+2018-04-29 - 2018-05-05;midden, dwijlen;plant, lavabo, gasvuur;beneden, afstoffen;wc, oven
+2018-05-06 - 2018-05-12;wc;midden;plant, lavabo;beneden
+2018-05-13 - 2018-05-19;beneden;wc;midden;plant, lavabo
+2018-05-20 - 2018-05-26;plant, lavabo;beneden;wc;midden
+2018-05-27 - 2018-06-02;midden, oven;plant, lavabo, dwijlen;beneden, gasvuur;wc, afstoffen
+2018-06-03 - 2018-06-09;wc;midden;plant, lavabo;beneden
+2018-06-10 - 2018-06-16;beneden;wc;midden;plant, lavabo
+2018-06-17 - 2018-06-23;plant, lavabo;beneden;wc;midden
+2018-06-24 - 2018-06-30;midden;plant, lavabo;beneden;wc
+2018-07-01 - 2018-07-07;wc, afstoffen;midden, oven;plant, lavabo, dwijlen;beneden, gasvuur
+2018-07-08 - 2018-07-14;beneden;wc;midden;plant, lavabo
+2018-07-15 - 2018-07-21;plant, lavabo;beneden;wc;midden
+2018-07-22 - 2018-07-28;midden;plant, lavabo;beneden;wc
+2018-07-29 - 2018-08-04;wc, gasvuur;midden, afstoffen;plant, lavabo, oven;beneden, dwijlen
+2018-08-05 - 2018-08-11;beneden;wc;midden;plant, lavabo
+2018-08-12 - 2018-08-18;plant, lavabo;beneden;wc;midden
+2018-08-19 - 2018-08-25;midden;plant, lavabo;beneden;wc
+2018-08-26 - 2018-09-01;wc, dwijlen;midden, gasvuur;plant, lavabo, afstoffen;beneden, oven
+2018-09-02 - 2018-09-08;beneden;wc;midden;plant, lavabo
+2018-09-09 - 2018-09-15;plant, lavabo;beneden;wc;midden
+2018-09-16 - 2018-09-22;midden;plant, lavabo;beneden;wc
+2018-09-23 - 2018-09-29;wc;midden;plant, lavabo;beneden
+2018-09-30 - 2018-10-06;beneden, oven;wc, dwijlen;midden, gasvuur;plant, lavabo, afstoffen
+2018-10-07 - 2018-10-13;plant, lavabo;beneden;wc;midden
+2018-10-14 - 2018-10-20;midden;plant, lavabo;beneden;wc
+2018-10-21 - 2018-10-27;wc;midden;plant, lavabo;beneden
+2018-10-28 - 2018-11-03;beneden, afstoffen;wc, oven;midden, dwijlen;plant, lavabo, gasvuur
+2018-11-04 - 2018-11-10;plant, lavabo;beneden;wc;midden
+2018-11-11 - 2018-11-17;midden;plant, lavabo;beneden;wc
